@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="hr_employee_year_of_experience_from">
+            <field name="name">employee.year.of.experience</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="joining_date"/>
+                    <field name="year_of_experience"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
